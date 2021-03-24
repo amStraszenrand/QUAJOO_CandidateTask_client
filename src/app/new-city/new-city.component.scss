@@ -1,0 +1,15 @@
+.btn-group button {
+  margin: 20px;
+}
+
+.btn-vertical-group button {
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-horizontal-group button {
+  display: inline;
+}
+
+.btn-margin-left {
+  float: right;
+}

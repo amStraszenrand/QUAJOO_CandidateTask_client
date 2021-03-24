@@ -1,0 +1,35 @@
+<div class="btn-group">
+
+  <div class="btn-horizontal-group">
+    <button (click)="getDefaultCity()">
+      Check connection.
+    </button>
+
+    <button (click)="printSomeCities()">
+      Print some Cities.
+    </button>
+
+    <button class="btn-margin-left" (click)="addCity()">
+      Save city.
+    </button>
+  </div>
+    <div class="btn-hoicontal-group">
+      <input type="text" placeholder="Search..." [(ngModel)]="cityName">
+      <button (click)="getCityByName()">
+        Get city by its name.
+      </button>
+    </div>
+
+    <div class="btn-horizontal-group">
+      <input type="text" placeholder="Search..." [(ngModel)]="cityId">
+      <button (click)="getCityById()">
+        Get city by its id.
+      </button>
+
+    </div>
+
+</div>
+
+<h3 [hidden]="hideStatusOutput">{{statusMsg}}</h3>
+
+<h4 [hidden]="hideCitiesOutput" *ngFor="let city of Cities">At {{city['name']}} (id: {{city['id']}}) there are currently {{city['temperature']}}°C.</h4>
